@@ -1,0 +1,66 @@
+.cards__container{
+    padding: 1rem 0;
+
+    .card__user{
+        width: 100%;
+        border: solid 1px var(--color-border-light);
+        padding: 1rem 0.5rem;
+
+        background-color: var(--color-card);
+
+        transition: ease-in-out 0.2s;
+
+        h4{
+            color: var(--color-border-light-bold);
+        }
+
+        hr{
+            border: none;
+            border-top: solid 1px var(--color-border-light);
+        }
+
+        .button{
+            justify-self: center;
+        }
+
+        img{
+            width: 3rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            transition: ease-in-out 0.2s;
+        }
+
+        img:hover{
+            position: initial;
+            scale: 2.5;
+            z-index: 2;
+            margin-right: 2.5rem;
+            border: solid 1px rgb(110, 110, 110);
+        }
+        
+        h2{
+            max-width: 70%;
+            white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+            overflow: hidden; /* Oculta el texto que sobrepasa el contenedor */
+            text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto que se corta */
+        }
+    }
+
+    .card__user:hover, .card__user:active{
+        position: initial;
+        z-index: 1;
+        scale: 1.03;
+
+        box-shadow: 0 0 32px 0px var(--color-card-shadow);
+    }
+}
+
+@media screen and (min-width: 800px){
+    .cards__container{
+        justify-content: space-between !important;
+    }
+
+    .card__user{
+        width: 20rem !important;
+    }
+}

@@ -1,0 +1,88 @@
+:root{
+    --color-border-light: rgb(219, 219, 219);
+    --color-border-light-bold: rgb(99, 99, 99);
+
+    --color-darkMode-btn-background: black;
+    --color-darkMode-btn-text: white;
+
+    --color-text-dark: black;
+    --color-text-light: white;
+
+    --color-body-background: white;
+
+    --color-form-background: white;
+    --color-input-form-text: black;
+
+    --color-card: white;
+    --color-card-shadow: rgb(0, 0, 0);
+
+    --font-size-medium: 20px;
+    --font-size-big: 30px;
+    --font-size-very-big: 40px;
+
+    --font-very-thin: 200;
+    --font-thin: 400;
+    --font-medium: 600;
+    --font-bold: 800;
+}
+  
+html{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: var(--font-medium);
+
+    color: var(--color-text-dark);
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem !important;
+
+    background-color: var(--color-body-background);
+    transition: all 0.3s ease-in-out;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 800px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #root{
+        width: 90% !important;
+    }
+}
+
+/* BUTTONS */
+.button{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: var(--font-medium);
+    border:none;
+    padding: 0.5rem 0.8rem;
+    width: fit-content;
+    min-width: 7rem;
+    align-self: center;
+
+    transition: ease-in-out 0.3s;
+}
+
+.button-create{
+    background-color: blue;
+    color: white;
+}
+
+.button-delete{
+    background-color: rgb(255, 68, 99);
+    color: black;
+}
+
+.button-edit{
+    background-color: rgb(180, 180, 180);
+    color: black;
+}
+
+.button:hover{
+    outline: solid rgb(82, 82, 82) 1px;
+}
