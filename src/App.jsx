@@ -71,14 +71,15 @@ function App() {
       <>
         <div className='flex justify-between align-center'>
           <h1>Usuarios</h1>
+
+          {/* DARK MODE */}
+          <div className='darkMode__container cursor-pointer' onClick={changeMode}><i className='height-fitContent bx bxs-moon bx-md'></i></div>
+          
           <button onClick={handleCreateBtn} className='button button-create cursor-pointer'>+ Crear usuario</button>
         </div>
 
         {/* LOADING SCREEN */}
         <div className='loadingScreen flex align-center justify-center'><i className='height-fitContent bx bx-loader-circle bx-spin bx-rotate-90 bx-lg' ></i></div>
-
-        {/* DARK MODE */}
-        <div className='darkMode__container cursor-pointer' onClick={changeMode}><i className='height-fitContent bx bxs-moon bx-md'></i></div>
         
         {/* LOS MODAL */}
         <Modal
